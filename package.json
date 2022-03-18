@@ -1,0 +1,31 @@
+{
+  "name": "joi2swagger",
+  "version": "1.0.0",
+  "description": "generate swagger.json file from joi schema file",
+  "keywords": [
+    "swagger",
+    "joi",
+    "converter"
+  ],
+  "scripts": {
+    "start": "node index.js",
+    "test": "joi2swagger -v ./test/validator.js -h ./test/header.json -o ./test/swagger.json",
+    "test-recursive": "joi2swagger -r -v ./test/ -h ./test/header.json -o ./test/swagger.json",
+    "help": "joi2swagger --help"
+  },
+  "author": "Huliqun",
+  "license": "MIT",
+  "main": "./index.js",
+  "bin": {
+    "joi2swagger": "./index.js"
+  },
+  "dependencies": {
+    "glob": "^7.2.0",
+    "fs-extra": "^10.0.1",
+    "joi": "^17.6.0",
+    "joi-phone-number": "^5.1.1",
+    "joi-to-swagger": "^6.0.1",
+    "yargs": "^17.1.1-candidate.0"
+  },
+  "devDependencies": {}
+}
