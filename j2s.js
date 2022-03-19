@@ -293,7 +293,7 @@ function joi2swagger(argv) {
       }
       const outputFile = path.resolve(relativeOutputFile);
       for (let r of requires) {
-        json = applyLogic(json, r.apiList);
+        json = applyLogic(json, r.default.apiList);
       }
 
       fs.outputFile(outputFile, JSON.stringify(json, null, 4), function (err) {
